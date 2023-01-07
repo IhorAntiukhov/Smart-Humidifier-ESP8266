@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/buttonUserProfile"
+        android:icon="@drawable/ic_normal_user_profile"
+        android:title="@string/button_user_profile"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/buttonSettings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/button_settings"
+        app:showAsAction="ifRoom" />
+</menu>

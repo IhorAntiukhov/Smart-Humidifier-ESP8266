@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HumidityModeFragment">
+
+    <LinearLayout
+        android:id="@+id/layoutTemperatureHumidity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="35dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="40dp"
+            android:layout_weight="1">
+
+            <ProgressBar
+                android:id="@+id/progressBarTemperature"
+                style="@style/ProgressBarStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:indeterminate="false"
+                android:max="35"
+                android:progress="0"
+                android:progressDrawable="@drawable/progress_bar_style"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1.0f"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textTemperature"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="#FF0000"
+                android:textStyle="bold"
+                android:maxLines="1"
+                app:autoSizeMaxTextSize="100dp"
+                app:autoSizeMinTextSize="10dp"
+                app:autoSizeStepGranularity="0.5dp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="3.3f"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1">
+
+            <ProgressBar
+                android:id="@+id/progressBarHumidity"
+                style="@style/HumidityProgressBarStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/progress_bar_style"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1.0f"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textHumidity"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:maxLines="1"
+                android:textColor="#0071FA"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="100dp"
+                app:autoSizeMinTextSize="10dp"
+                app:autoSizeStepGranularity="0.5dp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="3.3f"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewTemperatureRange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:backgroundTint="@color/primary_color"
+        android:visibility="gone"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="6dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="7dp">
+
+            <TextView
+                android:id="@+id/textTemperatureRange"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="start|center_vertical"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="40sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="0.5sp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="4.6f"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewHeaterStarted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="35dp"
+        android:backgroundTint="@color/primary_color"
+        android:visibility="gone"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="6dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/textHeaterStarted"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="40sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="0.5sp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="6.8f"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutTemperature"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="-6dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:hint="@string/input_layout_temperature"
+        android:textColor="@color/primary_color"
+        android:textColorHint="@color/primary_color"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeColor="@color/secondary_color"
+        app:boxStrokeWidth="4dp"
+        app:boxStrokeWidthFocused="4dp"
+        app:placeholderTextColor="@color/primary_color"
+        app:startIconTint="@color/primary_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputTemperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="2dp"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:paddingStart="12dp"
+            android:singleLine="true"
+            android:textColor="@color/primary_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonStartTemperatureMode"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/button_background_style"
+        android:maxLines="1"
+        android:paddingEnd="20dp"
+        android:text="@string/button_start_mode"
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeStepGranularity="0.5sp"
+        app:autoSizeTextType="uniform"
+        app:backgroundTint="#FFFFFF"
+        app:backgroundTintMode="multiply"
+        app:icon="@drawable/ic_thermometer"
+        app:iconPadding="0dp"
+        tools:ignore="ButtonStyle,RtlSymmetry" />
+
+    <Button
+        android:id="@+id/buttonStartHeater"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/button_background_style"
+        android:maxLines="1"
+        android:paddingEnd="20dp"
+        android:text="@string/button_start_heater"
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeStepGranularity="0.5sp"
+        app:autoSizeTextType="uniform"
+        app:backgroundTint="#FFFFFF"
+        app:backgroundTintMode="multiply"
+        app:icon="@drawable/ic_heater_on_ff"
+        app:iconPadding="4dp"
+        tools:ignore="ButtonStyle,RtlSymmetry" />
+
+    <Button
+        android:id="@+id/buttonStopHeater"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/button_background_style"
+        android:maxLines="1"
+        android:paddingEnd="20dp"
+        android:text="@string/button_stop_heater"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeStepGranularity="0.5sp"
+        app:autoSizeTextType="uniform"
+        app:backgroundTint="#FFFFFF"
+        app:backgroundTintMode="multiply"
+        app:icon="@drawable/ic_heater_on_ff"
+        app:iconPadding="4dp"
+        tools:ignore="ButtonStyle,RtlSymmetry" />
+
+    <Button
+        android:id="@+id/buttonStopTemperatureMode"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/button_background_style"
+        android:maxLines="1"
+        android:paddingEnd="20dp"
+        android:text="@string/button_stop_mode"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeStepGranularity="0.5sp"
+        app:autoSizeTextType="uniform"
+        app:backgroundTint="#FFFFFF"
+        app:backgroundTintMode="multiply"
+        app:icon="@drawable/ic_thermometer"
+        app:iconPadding="0dp"
+        tools:ignore="ButtonStyle,RtlSymmetry" />
+</LinearLayout>

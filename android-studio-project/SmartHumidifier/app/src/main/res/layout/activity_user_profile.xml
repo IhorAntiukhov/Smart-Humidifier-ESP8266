@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarUserProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+        <ImageView
+            android:id="@+id/imageUserProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:contentDescription="@string/image_view_user_profile"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_user_profile" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="35dp"
+            android:backgroundTint="@color/primary_color"
+            android:visibility="gone"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="6dp">
+
+            <RelativeLayout
+                android:id="@+id/layoutUserEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="11dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toStartOf="@+id/buttonEditEmail">
+
+                    <TextView
+                        android:id="@+id/textUserEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="start|center_vertical"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:autoSizeMaxTextSize="40sp"
+                        app:autoSizeMinTextSize="10sp"
+                        app:autoSizeStepGranularity="0.5sp"
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="7f"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageButton
+                    android:id="@+id/buttonEditEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="#00FFFFFF"
+                    android:contentDescription="@string/button_edit_email"
+                    app:srcCompat="@drawable/ic_edit"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewUserPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="35dp"
+            android:backgroundTint="@color/primary_color"
+            android:visibility="gone"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="6dp">
+
+            <RelativeLayout
+                android:id="@+id/layoutUserPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="11dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toStartOf="@+id/buttonEditPassword">
+
+                    <TextView
+                        android:id="@+id/textUserPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="start|center_vertical"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:autoSizeMaxTextSize="40sp"
+                        app:autoSizeMinTextSize="10sp"
+                        app:autoSizeStepGranularity="0.5sp"
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="7f"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageButton
+                    android:id="@+id/buttonEditPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="#00FFFFFF"
+                    android:contentDescription="@string/button_edit_password"
+                    app:srcCompat="@drawable/ic_edit"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/layoutUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="13dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/buttonLogout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_background_style"
+                android:maxLines="1"
+                android:text="@string/button_logout"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="0.5sp"
+                app:autoSizeTextType="uniform"
+                app:backgroundTint="#FFFFFF"
+                app:backgroundTintMode="multiply"
+                app:icon="@drawable/ic_login"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonDelete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_background_style"
+                android:maxLines="1"
+                android:text="@string/button_delete_user"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="0.5sp"
+                app:autoSizeTextType="uniform"
+                app:backgroundTint="#FFFFFF"
+                app:backgroundTintMode="multiply"
+                app:icon="@drawable/ic_small_user_profile"
+                tools:ignore="ButtonStyle" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutUserEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:hint="@string/input_layout_user_email"
+            android:textColor="@color/primary_color"
+            android:textColorHint="@color/primary_color"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="16dp"
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxStrokeColor="@color/secondary_color"
+            app:boxStrokeWidth="4dp"
+            app:boxStrokeWidthFocused="4dp"
+            app:placeholderTextColor="@color/primary_color"
+            app:startIconTint="@color/primary_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputUserEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!#$%^*@.-+=_`~?/"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="5dp"
+                android:includeFontPadding="false"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/primary_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutUserPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:hint="@string/input_layout_user_password"
+            android:textColor="@color/primary_color"
+            android:textColorHint="@color/primary_color"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="16dp"
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxStrokeColor="@color/secondary_color"
+            app:boxStrokeWidth="4dp"
+            app:boxStrokeWidthFocused="4dp"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/primary_color"
+            app:passwordToggleTint="@color/primary_color"
+            app:placeholderTextColor="@color/primary_color"
+            app:startIconTint="@color/primary_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputUserPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!#$%^*-+=_`~?/\()[]{}.,:;'"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="5dp"
+                android:includeFontPadding="false"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/primary_color"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:targetApi="o" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutResetPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_weight="0.4" />
+
+            <Button
+                android:id="@+id/buttonResetPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="35dp"
+                android:layout_weight="0.6"
+                android:background="@android:color/transparent"
+                android:maxLines="1"
+                android:padding="0dp"
+                android:text="@string/button_reset_password"
+                android:textColor="@color/primary_color"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="0.5sp"
+                app:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_background_style"
+            android:maxLines="1"
+            android:text="@string/button_login"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeStepGranularity="0.5sp"
+            app:autoSizeTextType="uniform"
+            app:backgroundTint="#FFFFFF"
+            app:backgroundTintMode="multiply"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCreateUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/primary_color"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_register"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription,VectorDrawableCompat,SpeakableTextPresentCheck" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

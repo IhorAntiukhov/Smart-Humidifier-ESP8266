@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewTime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="6.5dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="6.5dp"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="@color/primary_color"
+    app:cardCornerRadius="100dp"
+    app:cardElevation="6dp"
+    app:cardMaxElevation="100dp">
+
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="2.5dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignUpActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutWave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-38dp">
+
+        <RelativeLayout
+            android:id="@+id/layoutSecondWave"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/second_wave_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1.35f"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <RelativeLayout
+            android:id="@+id/layoutFirstWave"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/wave_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1.6f"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/button_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/textRegister"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center_vertical|end"
+            android:maxLines="1"
+            android:text="@string/button_sign_up"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeStepGranularity="0.5sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@id/buttonBack"
+            app:layout_constraintDimensionRatio="5.0f"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textUpdateUser"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center_vertical|end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeStepGranularity="0.5sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@id/layoutFirstWave"
+            app:layout_constraintDimensionRatio="5.0f"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonBack"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutUserEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/input_layout_user_email"
+        android:textColor="@color/primary_color"
+        android:textColorHint="@color/primary_color"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeColor="@color/secondary_color"
+        app:boxStrokeWidth="4dp"
+        app:boxStrokeWidthFocused="4dp"
+        app:placeholderTextColor="@color/primary_color"
+        app:startIconTint="@color/primary_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!#$%^*@.-+=_`~?/"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="5dp"
+            android:includeFontPadding="false"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@color/primary_color"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutUserPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:hint="@string/input_layout_user_password"
+        android:textColor="@color/primary_color"
+        android:textColorHint="@color/primary_color"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeColor="@color/secondary_color"
+        app:boxStrokeWidth="4dp"
+        app:boxStrokeWidthFocused="4dp"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/primary_color"
+        app:passwordToggleTint="@color/primary_color"
+        app:placeholderTextColor="@color/primary_color"
+        app:startIconTint="@color/primary_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputUserPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!#$%^*-+=_`~?/\()[]{}.,:;'"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="5dp"
+            android:includeFontPadding="false"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/primary_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:targetApi="o" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutConfirmPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/input_layout_confirm_password"
+        android:textColor="@color/primary_color"
+        android:textColorHint="@color/primary_color"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeColor="@color/secondary_color"
+        app:boxStrokeWidth="4dp"
+        app:boxStrokeWidthFocused="4dp"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/primary_color"
+        app:passwordToggleTint="@color/primary_color"
+        app:placeholderTextColor="@color/primary_color"
+        app:startIconTint="@color/primary_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!#$%^*-+=_`~?/\()[]{}.,:;'"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="5dp"
+            android:includeFontPadding="false"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/primary_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:targetApi="o" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonCreateUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/button_background_style"
+        android:maxLines="1"
+        android:text="@string/button_create_user"
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeStepGranularity="0.5sp"
+        app:autoSizeTextType="uniform"
+        app:backgroundTint="#FFFFFF"
+        app:backgroundTintMode="multiply"
+        tools:ignore="ButtonStyle" />
+
+    <Button
+        android:id="@+id/buttonUpdateUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_background_style"
+        android:maxLines="1"
+        android:text="@string/button_update_user"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeStepGranularity="0.5sp"
+        app:autoSizeTextType="uniform"
+        app:backgroundTint="#FFFFFF"
+        app:backgroundTintMode="multiply"
+        tools:ignore="ButtonStyle" />
+
+</LinearLayout>

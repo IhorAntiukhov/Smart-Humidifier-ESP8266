@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "518065513678",
+    "firebase_url": "https://smartwifiheater-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "smartwifiheater",
+    "storage_bucket": "smartwifiheater.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518065513678:android:bef4b8637f87669b6c5c9f",
+        "android_client_info": {
+          "package_name": "com.arduinoworld.smartheater"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518065513678-mrtq8i81mcp1kq4h3goako3ckanod7vi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIBN_wGtkt5PugNp_ewyM7IijromjxtBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518065513678-mrtq8i81mcp1kq4h3goako3ckanod7vi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

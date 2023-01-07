@@ -1,0 +1,45 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/temperature_mode_title"
+        android:layout="@layout/preferences_category_layout">
+        <EditTextPreference
+            android:key="ReducingTheMinTemperature"
+            android:defaultValue="5"
+            android:title="@string/reducing_the_min_temperature_title"
+            android:summary="@string/reducing_the_min_temperature_summary"
+            app:allowDividerAbove="true"
+            app:allowDividerBelow="true" />
+
+        <EditTextPreference
+            android:key="IncreasingTheMaxTemperature"
+            android:defaultValue="5"
+            android:title="@string/increasing_the_max_temperature_title"
+            android:summary="@string/increasing_the_max_temperature_summary"
+            app:allowDividerAbove="true"
+            app:allowDividerBelow="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/other_settings_title"
+        android:layout="@layout/preferences_category_layout">
+
+        <ListPreference
+            android:key="isHapticFeedbackEnabled"
+            android:defaultValue="1"
+            android:title="@string/select_vibration_type"
+            android:entries="@array/vibrationNames"
+            android:entryValues="@array/vibrationTypes"
+            app:allowDividerAbove="true"
+            app:allowDividerBelow="true" />
+
+        <Preference
+            app:key="buttonDefaultSettings"
+            app:title="@string/button_default_settings"
+            app:allowDividerAbove="true"
+            app:allowDividerBelow="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

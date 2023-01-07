@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TimeModeFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28.5dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="28.5dp"
+        android:scrollbarThumbHorizontal="@drawable/scrollbar_style"
+        android:scrollbars="horizontal" />
+
+    <LinearLayout
+        android:id="@+id/layoutTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/buttonAddTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/button_background_style"
+            android:maxLines="1"
+            android:text="@string/button_add_time"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeStepGranularity="0.5sp"
+            app:autoSizeTextType="uniform"
+            app:backgroundTint="#FFFFFF"
+            app:backgroundTintMode="multiply"
+            app:icon="@drawable/ic_add_time"
+            app:iconPadding="6dp"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonDeleteTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/button_background_style"
+            android:maxLines="1"
+            android:text="@string/button_delete_user"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeStepGranularity="0.5sp"
+            app:autoSizeTextType="uniform"
+            app:backgroundTint="#FFFFFF"
+            app:backgroundTintMode="multiply"
+            app:icon="@drawable/ic_delete_time"
+            app:iconPadding="3dp"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonStartTimeMode"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/button_background_style"
+        android:maxLines="1"
+        android:paddingEnd="20dp"
+        android:text="@string/button_start_mode"
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeStepGranularity="0.5sp"
+        app:autoSizeTextType="uniform"
+        app:backgroundTint="#FFFFFF"
+        app:backgroundTintMode="multiply"
+        app:icon="@drawable/ic_clock"
+        app:iconPadding="6dp"
+        tools:ignore="ButtonStyle,RtlSymmetry" />
+
+    <Button
+        android:id="@+id/buttonStopTimeMode"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/button_background_style"
+        android:maxLines="1"
+        android:paddingEnd="20dp"
+        android:text="@string/button_stop_mode"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeStepGranularity="0.5sp"
+        app:autoSizeTextType="uniform"
+        app:backgroundTint="#FFFFFF"
+        app:backgroundTintMode="multiply"
+        app:icon="@drawable/ic_clock"
+        app:iconPadding="6dp"
+        tools:ignore="ButtonStyle,RtlSymmetry" />
+</LinearLayout>
