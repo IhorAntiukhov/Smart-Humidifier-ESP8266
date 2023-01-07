@@ -15,7 +15,7 @@ This project is a *smart humidifier* on the *ESP8266* board. With it, you can ma
 
  ## Circuit for soldering components
 
- ![Circuit image](https://github.com/IhorAntiukhov/Smart-Humidifier-ESP8266/blob/main/images/Circuit.jpg)
+ ![Circuit image](https://github.com/IhorAntiukhov/Smart-Humidifier-ESP8266/blob/main/images/Circuit.png)
 
  ## Firebase
 
